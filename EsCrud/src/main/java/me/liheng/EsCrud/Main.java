@@ -23,7 +23,7 @@ public class Main {
                 new HttpHost("localhost", 9200, "http")).build()) {
 
             CrudMethodsSynchronous scm = new CrudMethodsSynchronous("catalog_item_low_level", client);
-//            scm.createCatalogItem(CatalogItemUtil.getCatalogItems());
+            scm.createCatalogItem(CatalogItemUtil.getCatalogItems());
 
             List<CatalogItem> items = scm.findCatalogItem("flashlight");
             LOG.info("Found {} items: {}", items.size(), items);
